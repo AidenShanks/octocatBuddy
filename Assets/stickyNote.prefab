@@ -11,7 +11,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 4.913276, y: -2.770752, z: 0.000000}
+    position: {x: 4.913276, y: -2.770752, z: -0.902819}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 0.110000, y: 0.110000, z: 0.110000}
     hasSegmentScaleCompensation: false
@@ -149,7 +149,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -90.000000, y: 100.000000, z: -200.020004}
+    position: {x: -160.000000, y: 150.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 50.000000, y: 49.999996, z: 14.254595}
     hasSegmentScaleCompensation: false

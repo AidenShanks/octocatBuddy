@@ -28,30 +28,45 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    backgroundMesh: false
+    cursorBlinkSpeed: false
     defaultText: false
     enableEditing: false
+    enableTypewriterEffect: false
     maxCharacters: false
     maxFontSize: false
     minFontSize: false
+    randomizeColorOnStart: false
     textComponent: false
+    typingSpeedSeconds: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - textComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      backgroundMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
       defaultText: Click to edit...
       maxFontSize: !<float> 32.000000
       minFontSize: !<float> 12.000000
       maxCharacters: !<float> 50.000000
       enableEditing: true
+      randomizeColorOnStart: true
+      enableTypewriterEffect: true
+      typingSpeedSeconds: 0.050000
+      cursorBlinkSpeed: 0.300000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Component.Text textComponent
+    - // @input Component.RenderMeshVisual backgroundMesh
     - '// @input string defaultText = "Click to edit..."'
     - '// @input number maxFontSize = "32"'
     - '// @input number minFontSize = "12"'
     - '// @input number maxCharacters = "50"'
     - '// @input boolean enableEditing = "true"'
+    - '// @input boolean randomizeColorOnStart = "true"'
+    - '// @input boolean enableTypewriterEffect = "true"'
+    - '// @input number typingSpeedSeconds = "0.05"'
+    - '// @input number cursorBlinkSpeed = "0.3"'
