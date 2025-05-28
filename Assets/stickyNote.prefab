@@ -1,10 +1,25 @@
-- !<ObjectPrefab/ee9ee9d7-42cc-44f3-9743-39808b74c03c>
+- !<ObjectPrefab/b524cd24-46eb-437f-ba31-4d3a5f4ed53b>
   PackagePath: ""
   objects:
-    - !<own> 680b395e-dd45-4f31-9429-b41b097bb9dd
+    - !<own> b3429233-50a6-4d3b-b735-6b01deba3458
   LazyLoading: false
   RetainAssets: true
-- !<ScriptComponent/0324150a-06ab-47f3-9695-3e23a3f0c739>
+- !<SceneObject/08040f0a-a46e-4fd0-8a9f-b537f82b2a92>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 4.913276, y: -2.770752, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 0.110000, y: 0.110000, z: 0.110000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c5533715-9919-45f5-861d-d6160178b06f
+- !<ScriptComponent/0dd501f5-9c05-49c3-aa97-4372b7f9d233>
   PrefabRemaps:
     []
   Name: InteractableAudioFeedback
@@ -30,7 +45,7 @@
   ScriptTypes:
     "":
       {}
-- !<BodyComponent/06e2b520-4133-4a61-b35a-f45019b49057>
+- !<BodyComponent/12cd6b8a-167f-437b-865d-6a627f0f4d2c>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -54,29 +69,7 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<ScriptComponent/15d7af16-23e8-4d26-9339-1ee1df6c3338>
-  PrefabRemaps:
-    []
-  Name: InteractableOutlineFeedback
-  Enabled: true
-  ScriptAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
-  ScriptInputsDefault:
-    targetOutlineMaterial: true
-    activatingColor: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      targetOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
-      hoveringColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-      activatingColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-      outlineWeight: !<float> 1.000000
-      meshVisuals: !<reference.RenderMeshVisual[]>
-        - !<reference> cd9687c9-c36c-496b-bc58-d6f4335fae93
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/34ec27ad-3623-4e72-98da-83526d385205>
+- !<ScriptComponent/531cf452-8ce8-49c0-bd7c-846df9aaae73>
   PrefabRemaps:
     []
   Name: Interactable
@@ -108,59 +101,70 @@
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/5a1df11e-a8eb-438d-8ef4-7932d80f7555>
+- !<ScriptComponent/7960efaf-033b-4189-8132-4b108642265e>
   PrefabRemaps:
     []
-  Name: SyncTransform
+  Name: PositionInitializer
   Enabled: true
-  ScriptAsset: !<reference> f3c20594-375f-43d8-a93f-a8e75bd6a61d
+  ScriptAsset: !<reference> 225d583c-8e02-48b8-ac6d-86363fd87979
   ScriptInputsDefault:
-    networkIdTypeString: true
-    customNetworkId: true
-    persistenceString: true
-    sendsPerSecondLimit: true
-    useSmoothing: true
-    interpolationTarget: true
+    positionInFrontOfCamera: true
+    triggerOnlyForMapper: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      networkIdTypeString: objectId
-      customNetworkId: enter_unique_id
-      positionSyncString: Location
-      rotationSyncString: Location
-      scaleSyncString: Location
-      persistenceString: Session
-      sendsPerSecondLimit: 10
-      useSmoothing: true
-      interpolationTarget: -0.250000
+      positionInFrontOfCamera: !<Vec3> {x: 0.000000, y: 0.000000, z: -110.000000}
+      shouldFaceCamera: true
+      triggerOnlyForMapper: true
   ScriptTypes:
     "":
       {}
-- !<SceneObject/680b395e-dd45-4f31-9429-b41b097bb9dd>
+- !<ScriptComponent/aabb3bb0-f2f9-4a98-81be-62d74e16ec3c>
+  PrefabRemaps:
+    []
+  Name: InteractableOutlineFeedback
+  Enabled: true
+  ScriptAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
+  ScriptInputsDefault:
+    targetOutlineMaterial: true
+    activatingColor: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      targetOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
+      hoveringColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      activatingColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      outlineWeight: !<float> 1.000000
+      meshVisuals: !<reference.RenderMeshVisual[]>
+        - !<reference> c2a11a05-8823-4870-b81a-d31f1b4c408e
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/b3429233-50a6-4d3b-b735-6b01deba3458>
   PrefabRemaps:
     []
   Name: stickyNote
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.200000, z: 0.000000}
+    position: {x: -90.000000, y: 100.000000, z: -200.020004}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 10.000000, y: 9.999999, z: 2.850919}
+    scale: {x: 50.000000, y: 49.999996, z: 14.254595}
     hasSegmentScaleCompensation: false
   Children:
-    - !<own> ea19342c-84cf-473f-b03e-98e30a47e7c3
+    - !<own> 08040f0a-a46e-4fd0-8a9f-b537f82b2a92
   Components:
-    - !<own> 34ec27ad-3623-4e72-98da-83526d385205
-    - !<own> 06e2b520-4133-4a61-b35a-f45019b49057
-    - !<own> ad304643-46d2-4ff7-9b0b-adedce50c647
-    - !<own> cd9687c9-c36c-496b-bc58-d6f4335fae93
-    - !<own> 15d7af16-23e8-4d26-9339-1ee1df6c3338
-    - !<own> 0324150a-06ab-47f3-9695-3e23a3f0c739
-    - !<own> fcb3aca2-db1b-44e4-ae64-1f4205488901
-    - !<own> 5a1df11e-a8eb-438d-8ef4-7932d80f7555
-    - !<own> b1c2d3e4-f5a6-4b7c-8d9e-1f2a3b4c5d6e
-- !<ScriptComponent/ad304643-46d2-4ff7-9b0b-adedce50c647>
+    - !<own> 531cf452-8ce8-49c0-bd7c-846df9aaae73
+    - !<own> 12cd6b8a-167f-437b-865d-6a627f0f4d2c
+    - !<own> c028be80-dac2-4831-864f-b4f012d93ae7
+    - !<own> c2a11a05-8823-4870-b81a-d31f1b4c408e
+    - !<own> aabb3bb0-f2f9-4a98-81be-62d74e16ec3c
+    - !<own> 0dd501f5-9c05-49c3-aa97-4372b7f9d233
+    - !<own> 7960efaf-033b-4189-8132-4b108642265e
+    - !<own> f8593f3e-44ea-4fac-aaec-f1183a406631
+- !<ScriptComponent/c028be80-dac2-4831-864f-b4f012d93ae7>
   PrefabRemaps:
     []
   Name: InteractableManipulation
@@ -191,7 +195,7 @@
     {}
   ScriptInputs:
     "":
-      manipulateRootSceneObject: !<reference.SceneObject> 680b395e-dd45-4f31-9429-b41b097bb9dd
+      manipulateRootSceneObject: !<reference.SceneObject> b3429233-50a6-4d3b-b735-6b01deba3458
       minimumScaleFactor: 0.250000
       maximumScaleFactor: !<float> 20.000000
       enableTranslation: true
@@ -215,7 +219,7 @@
   ScriptTypes:
     "":
       {}
-- !<RenderMeshVisual/cd9687c9-c36c-496b-bc58-d6f4335fae93>
+- !<RenderMeshVisual/c2a11a05-8823-4870-b81a-d31f1b4c408e>
   PrefabRemaps:
     []
   Name: single_front_0
@@ -235,22 +239,7 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/ea19342c-84cf-473f-b03e-98e30a47e7c3>
-  PrefabRemaps:
-    []
-  Name: Text
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> f90d80f7-a1f8-48fb-a14d-73a7cd5eeb6a
-- !<Text/f90d80f7-a1f8-48fb-a14d-73a7cd5eeb6a>
+- !<Text/c5533715-9919-45f5-861d-d6160178b06f>
   PrefabRemaps:
     []
   Name: Text
@@ -262,23 +251,23 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Click to edit...
+  Text: "What is happening this is weird I cannot figure out why this is not wrapping, it just keeps on going on and on and wont wr"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
-  SizeToFit: true
-  FontSize: 32
+  SizeToFit: false
+  FontSize: 45
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   LayoutRect:
-    left: -6.500000
-    bottom: -1.800000
-    right: 6.500000
-    top: 1.800000
-  OverflowVertical: Shrink
-  OverflowHorizontal: Shrink
+    left: -7.540000
+    bottom: -1.840000
+    right: 7.340000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Wrap
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 0.200000, y: 0.200000, z: 0.200000, w: 1.000000}
+    Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     TileCount: 5.000000
     TileZone: Rect
@@ -320,54 +309,38 @@
       top: 0.000000
     CornerRadius: 0.000000
   AdvancedLayout: !<TextAdvancedLayout>
-    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
-    LetterSpacing: 0.000000
+    ExtentsTarget: !<reference> bb3e9660-7968-4b87-bf73-c2b4e4cbe622
+    LetterSpacing: 0.090000
     LineSpacing: 1.000000
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
-- !<ScriptComponent/fcb3aca2-db1b-44e4-ae64-1f4205488901>
+- !<ScriptComponent/f8593f3e-44ea-4fac-aaec-f1183a406631>
   PrefabRemaps:
     []
-  Name: PositionInitializer
+  Name: SyncTransform
   Enabled: true
-  ScriptAsset: !<reference> 225d583c-8e02-48b8-ac6d-86363fd87979
+  ScriptAsset: !<reference> f3c20594-375f-43d8-a93f-a8e75bd6a61d
   ScriptInputsDefault:
-    positionInFrontOfCamera: true
-    triggerOnlyForMapper: true
+    networkIdTypeString: true
+    customNetworkId: true
+    persistenceString: true
+    sendsPerSecondLimit: true
+    useSmoothing: true
+    interpolationTarget: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      positionInFrontOfCamera: !<Vec3> {x: 0.000000, y: 0.000000, z: -110.000000}
-      shouldFaceCamera: true
-      triggerOnlyForMapper: true
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/b1c2d3e4-f5a6-4b7c-8d9e-1f2a3b4c5d6e>
-  PrefabRemaps:
-    []
-  Name: StickyNoteTextController
-  Enabled: true
-  ScriptAsset: !<reference> 00000000-0000-0000-0000-000000000000
-  ScriptInputsDefault:
-    textComponent: true
-    defaultText: true
-    maxFontSize: true
-    minFontSize: true
-    maxCharacters: true
-    enableEditing: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      textComponent: !<reference.Text> f90d80f7-a1f8-48fb-a14d-73a7cd5eeb6a
-      defaultText: "Click to edit..."
-      maxFontSize: 32
-      minFontSize: 12
-      maxCharacters: 50
-      enableEditing: true
+      networkIdTypeString: objectId
+      customNetworkId: enter_unique_id
+      positionSyncString: Location
+      rotationSyncString: Location
+      scaleSyncString: Location
+      persistenceString: Session
+      sendsPerSecondLimit: 10
+      useSmoothing: true
+      interpolationTarget: -0.250000
   ScriptTypes:
     "":
       {}

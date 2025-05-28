@@ -28,16 +28,30 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    defaultText: false
+    enableEditing: false
+    maxCharacters: false
+    maxFontSize: false
+    minFontSize: false
+    textComponent: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    -
-      {}
+    - textComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      defaultText: Click to edit...
+      maxFontSize: !<float> 32.000000
+      minFontSize: !<float> 12.000000
+      maxCharacters: !<float> 50.000000
+      enableEditing: true
   ScriptTypes:
     -
       {}
   InputLines:
-    []
+    - // @input Component.Text textComponent
+    - '// @input string defaultText = "Click to edit..."'
+    - '// @input number maxFontSize = "32"'
+    - '// @input number minFontSize = "12"'
+    - '// @input number maxCharacters = "50"'
+    - '// @input boolean enableEditing = "true"'
